@@ -3,6 +3,7 @@
 <head>
   <title>Dive into DC</title>
   <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.100.1/css/materialize.min.css">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/meyer-reset/2.0/reset.css">
@@ -36,12 +37,12 @@
       <div class="col s12">
       
   <!-- <table style="width:960px"> -->
-
+<form action="" class="form" method="post">
   <div class="holder">
   <tr>
     <td>
       <hr>
-        <p class="question">How many day you will be in DC?</p><br>
+        <p class="question">How many days will you be in DC?</p><br>
 
         <ul>
 
@@ -56,7 +57,7 @@
      </div></label>
           
           <input name="days" type="radio" value="5" id="fiveDay"/> <label for="fiveDay"><div class="work">
-      <img src="images/dc2.gif" alt="5 days">
+      <img src="images/dc.gif" alt="5 days">
       <h3>5 days</h3>
      </div></label>
 </ul>
@@ -70,11 +71,11 @@
     <tr>
     <td>
           <hr>
-        <p class="question">How many people are you going with?</p><br>
+        <p class="question">How many people are you travling with?</p><br>
 
         <ul>
           <input class="with-gap" name="people" type="radio" value="self" id="self"/> <label for="self"><div class="work">
-      <img src="https://media.giphy.com/media/GR9Pw1sZa2XaU/giphy.gif" alt="myself">
+      <img src="images/alonegirl.gif" alt="myself">
       <h3>Myself</h3>
      </div></label>
       
@@ -99,21 +100,21 @@
   <tr>
     <td>
       <hr>
-      <p class="question">How action packed do you want your day to be?</p><br>         
+      <p class="question">How action packed do you want your day to be?</p><br>        
       <ul>
           <input class="with-gap" name="action" type="radio" value="easyDay" id="easyDay"/> <label for="easyDay"><div class="work">
-      <img src="images/food2.gif" alt="easy going">
+      <img src="images/easy.gif" alt="easy going">
       <h3>Easy Going</h3>
      </div></label>
        
           <input class="with-gap" name="action" type="radio" value="topDay" id="topDay"/> <label for="topDay"><div class="work">
-      <img src="images/art.gif" alt="packed itinerary">
-      <h3>Packed Itinerary</h3>
+      <img src="images/busy.gif" alt="packed itinerary">
+      <h3>Busy Itinerary</h3>
      </div></label>
           
 
           <input class="with-gap" name="action" type="radio" value="busy" id="busyDay"/> <label for="busyDay"><div class="work">
-      <img src="images/food1.gif" alt="top attractions">
+      <img src="images/top.gif" alt="top attractions">
       <h3>Top Attractions</h3>
      </div></label>
           
@@ -124,6 +125,7 @@
   
   </tr>
   </div>
+  </form>
 
   <!--</table> -->
 
@@ -146,11 +148,11 @@
          <div class="itinerary-name"> <p>Your Personalized Itinerary:</p></div><br>
           <div class="itinerary" id="Morning"><b>Morning: </b>
           <ul class="morningList"></ul>
-        </div><br>
+        </div>
        
         <div class="itinerary" id="Afternoon"><b>Afternoon: </b>
             <ul class="afternoonList"></ul>
-        </div><br>
+        </div>
         
         <div class="itinerary" id="evening"><b>Evening: </b>
             <ul class="eveningList"></ul>
@@ -159,7 +161,6 @@
       </div>     
       <div class="col s4">
           <div id="map" style="float:right; margin-right: 10px; height: 300px; width: 300px;"></div><br><br><br>
-          <!-- <div id="weather" style="float:right; height: 40px;"></div> -->
           <div id="openweathermap-widget-15" style="float:right; margin-right: 10px; width: 300px;"></div>
       </div>
     </div>
@@ -174,22 +175,6 @@
   </center>
 
 <script src="https://www.gstatic.com/firebasejs/4.2.0/firebase.js"></script>
-<script>
-  // Initialize Firebase
-  var config = {
-    apiKey: "AIzaSyD85yQOwYvdRXaa8LwfhDbnNd5xYcQxFxo",
-    authDomain: "dc-button.firebaseapp.com",
-    databaseURL: "https://dc-button.firebaseio.com",
-    projectId: "dc-button",
-    storageBucket: "",
-    messagingSenderId: "656368330026"
-  };
-  firebase.initializeApp(config);
-//images FadeOut when click
-  $( ".work" ).click(function() {
-  $( this ).fadeTo( "fast", 0.5 );
-});
-</script>
 <script async defer
     src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAde-XEwDer3UAxRX_X4IZTRERIecXKPZI&libraries=places&callback=initMap">
     </script>

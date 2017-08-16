@@ -30,12 +30,21 @@ body {
 
 .itinerary{
   color: black;
-  width: 450px;
+  padding: 15px;
+  margin: 5px;
 }
 
 .itinerary-name{
   font-size: 26px;
   font-weight: bold;
+}
+
+#map{
+  display: inline-block;
+}
+#openweathermap-widget-15 {
+  display:inline-block;
+  margin-top: 20px;
 }
 
 .holder {
@@ -128,19 +137,6 @@ input.answer[type="radio"] {
   margin-bottom: 10px;
 }
 
-
-th {
-  
-}
-
-tr {
-  
-}
-
-td {
-
-}
-
 .submitter {
     width:85px;
 }
@@ -149,6 +145,46 @@ td {
     display:none;
 }
 
-
 /*SFS light red = #c30b0a;
 SFS dark red = #9f2026; */
+
+
+/*mobile responsiveness */
+@media only screen and (max-width: 930px) {
+  #map, #openweathermap-widget-15{
+    display: flex;
+    flex-direction: column; /* For vertical placement of items */
+  }
+
+  .itinerary{
+    flex: 1;
+  }
+
+
+  header .container {
+    padding: 0;
+  }
+  main.container {
+    padding-top: 0;
+  }
+  .nav-wrapper,
+  .work,
+  #nav-mobile {
+    width: 100%;
+  }
+  nav {
+    /* Box-model */
+    width: 100%;
+    /* Positioning */
+    margin: 15px 0;
+    /* Typography */
+    text-align: center;
+  }
+  nav a {
+    /* Box-model */
+    width: 30%;
+    padding-left: 0;
+    /* Positioning */
+    margin-left: 0;
+  }
+}
