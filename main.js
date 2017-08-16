@@ -1,18 +1,3 @@
- // Initialize Firebase
-  var config = {
-    apiKey: "AIzaSyD85yQOwYvdRXaa8LwfhDbnNd5xYcQxFxo",
-    authDomain: "dc-button.firebaseapp.com",
-    databaseURL: "https://dc-button.firebaseio.com",
-    projectId: "dc-button",
-    storageBucket: "",
-    messagingSenderId: "656368330026"
-  };
-  firebase.initializeApp(config);
-//images FadeOut when click
-  $( ".work" ).click(function() {
-  $( this ).fadeTo( "fast", 0.5 );
-});
-
  //var for people
 var selfRadio = $('#self');
 var coupleRadio = $('#couple');
@@ -495,7 +480,6 @@ else if(familyRadio.prop('checked') && oneday.prop('checked') && easyday.prop('c
 resetForm();
 }//init map
 
-//to reset form after submittal
 function resetForm(){
 
     $(".form input[type=radio]").each(function () {

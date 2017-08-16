@@ -3,7 +3,6 @@
 <head>
   <title>Dive into DC</title>
   <meta charset="utf-8">
-  <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.100.1/css/materialize.min.css">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/meyer-reset/2.0/reset.css">
@@ -42,7 +41,7 @@
   <tr>
     <td>
       <hr>
-        <p class="question">How many days will you be in DC?</p><br>
+        <p class="question">How many days are you going to be in DC?</p><br>
 
         <ul>
 
@@ -71,7 +70,7 @@
     <tr>
     <td>
           <hr>
-        <p class="question">How many people are you travling with?</p><br>
+        <p class="question">How many people are you going with?</p><br>
 
         <ul>
           <input class="with-gap" name="people" type="radio" value="self" id="self"/> <label for="self"><div class="work">
@@ -148,11 +147,11 @@
          <div class="itinerary-name"> <p>Your Personalized Itinerary:</p></div><br>
           <div class="itinerary" id="Morning"><b>Morning: </b>
           <ul class="morningList"></ul>
-        </div>
+        </div><br>
        
         <div class="itinerary" id="Afternoon"><b>Afternoon: </b>
             <ul class="afternoonList"></ul>
-        </div>
+        </div><br>
         
         <div class="itinerary" id="evening"><b>Evening: </b>
             <ul class="eveningList"></ul>
@@ -161,6 +160,7 @@
       </div>     
       <div class="col s4">
           <div id="map" style="float:right; margin-right: 10px; height: 300px; width: 300px;"></div><br><br><br>
+          <div id="weather">The Weather Forecast for today is: </div><br>
           <div id="openweathermap-widget-15" style="float:right; margin-right: 10px; width: 300px;"></div>
       </div>
     </div>
@@ -175,6 +175,22 @@
   </center>
 
 <script src="https://www.gstatic.com/firebasejs/4.2.0/firebase.js"></script>
+<script>
+  // Initialize Firebase
+  var config = {
+    apiKey: "AIzaSyD85yQOwYvdRXaa8LwfhDbnNd5xYcQxFxo",
+    authDomain: "dc-button.firebaseapp.com",
+    databaseURL: "https://dc-button.firebaseio.com",
+    projectId: "dc-button",
+    storageBucket: "",
+    messagingSenderId: "656368330026"
+  };
+  firebase.initializeApp(config);
+//images FadeOut when click
+  $( ".work" ).click(function() {
+  $( this ).fadeTo( "fast", 0.5 );
+});
+</script>
 <script async defer
     src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAde-XEwDer3UAxRX_X4IZTRERIecXKPZI&libraries=places&callback=initMap">
     </script>
